@@ -23,6 +23,9 @@ For today, you will need
 
 Take a look at [day nine of Maker Advent](https://youtu.be/xc2CBeLp_8A) to get an idea on how Node-RED works with ntfy.sh
 
+The JSON file inside this repository contains all of the nodes needed to create the project. All you need to do is copy the JSON code and import it into Node-RED. Here is a quick GIF to show how to do it.
+![Node-RED Import](node-red-import.gif)
+
 
 Enjoyed this project? Check out the rest of **MakerAdvent 2024** on [YouTube](https://youtube.com/playlist?list=PLl7sf03jEHOQ-iI5y5vw6luiuBprks3Bx&si=iQWFclF5UEtYOykv)!  
 
