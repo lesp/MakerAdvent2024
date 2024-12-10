@@ -7,7 +7,9 @@ Welcome to Day 10 of **MakerAdvent 2024**! This project is part of a 24-day jour
 ## 🎯 Project Overview
 
 **Day 10 Sending a photo to ntfy.sh:**  
-The goal today is to send a photo, captured using a Raspberry Pi Camera, to ntfy.sh using Node-RED
+The goal today is to send a photo, captured using a Raspberry Pi Camera, to ntfy.sh using Node-RED.
+
+Here is a [video](https://youtu.be/xtkpPKeXc8s) showing how the project works.
 
 ---
 
@@ -17,9 +19,12 @@ The goal today is to send a photo, captured using a Raspberry Pi Camera, to ntfy
 
 For today, you will need
 
+![Raspberry Pi 5 and camera on desk](Pi 5_and_Camera.jpg)
+
 - Any model of Raspberry Pi
 - Raspberry Pi Camera connected
 - Node-RED installed on your Raspberry Pi
+
 
 Take a look at [day nine of Maker Advent](https://youtu.be/xc2CBeLp_8A) to get an idea on how Node-RED works with ntfy.sh
 
