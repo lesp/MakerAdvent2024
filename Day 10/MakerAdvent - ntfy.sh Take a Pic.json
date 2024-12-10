@@ -1,0 +1,132 @@
+[
+    {
+        "id": "90d04b53da1a38c6",
+        "type": "debug",
+        "z": "dc9b8bb6270a3cd2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7d6d2c0351e65971",
+        "type": "exec",
+        "z": "dc9b8bb6270a3cd2",
+        "command": "rpicam-jpeg --width 1920 --height 1080 -o test.jpg",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Take a 1920x1080 pic",
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "90d04b53da1a38c6",
+                "b11924fc9c36deba"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6e75bc41d2ec4a03",
+        "type": "function",
+        "z": "dc9b8bb6270a3cd2",
+        "name": "ntfy.sh headers",
+        "func": "msg.payload = msg.payload;\nmsg.headers = {};\nmsg.headers['tags'] = 'tada';\nmsg.headers['X-Title'] = 'Biglesp Captured';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 500,
+        "wires": [
+            [
+                "eb160615b6ceda98"
+            ]
+        ]
+    },
+    {
+        "id": "eb160615b6ceda98",
+        "type": "http request",
+        "z": "dc9b8bb6270a3cd2",
+        "name": "ntfy.sh",
+        "method": "PUT",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "https://ntfy.sh/biglesp-office",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b8dbf15c8a7a3a5",
+        "type": "inject",
+        "z": "dc9b8bb6270a3cd2",
+        "name": "Trigger the camera",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "20",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "7d6d2c0351e65971"
+            ]
+        ]
+    },
+    {
+        "id": "b11924fc9c36deba",
+        "type": "file in",
+        "z": "dc9b8bb6270a3cd2",
+        "name": "Read file",
+        "filename": "/home/pi/test.jpg",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "6e75bc41d2ec4a03"
+            ]
+        ]
+    }
+]
