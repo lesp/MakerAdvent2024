@@ -19,7 +19,7 @@ Here is a [video](https://youtu.be/xtkpPKeXc8s) showing how the project works.
 
 For today, you will need
 
-![Raspberry Pi 5 and camera on desk](Pi 5_and_Camera.jpg)
+![Raspberry Pi 5 and camera on desk](https://github.com/lesp/MakerAdvent2024/blob/main/Day%2010/Pi%205_and_Camera.jpg)
 
 - Any model of Raspberry Pi
 - Raspberry Pi Camera connected
