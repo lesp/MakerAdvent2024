@@ -8,7 +8,7 @@ Welcome to Day 14 of **MakerAdvent 2024**! This project is part of a 24-day jour
 
 **Day 14 Challenge:**  
 
-{Gary the Gonk](https://github.com/lesp/MakerAdvent2024/blob/main/Day%2014/Gary1.png)
+[Gary the Gonk](https://github.com/lesp/MakerAdvent2024/blob/main/Day%2014/Gary1.png)
 Can you protect Gary the Gonk's precious baubles?
 
 ---
